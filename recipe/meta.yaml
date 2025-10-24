@@ -23,17 +23,14 @@ requirements:
     - pip
     - numpy
     - cython
-    {% if not compiler('c').startswith('toolchain') %}
     - llvm-openmp  # [osx]
-    {% endif %}
+    - setuptools
     - gsl  # [linux]
   run:
     - python
     - scipy
-    {% if not compiler('c').startswith('toolchain') %}
     - llvm-openmp  # [osx]
-    {% endif %}
-
+    
 test:
   imports:
     - pypolyagamma
