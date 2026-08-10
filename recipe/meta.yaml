@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/slinderman/pypolyagamma/archive/{{ version }}.tar.gz
   sha256: c98828ad630586c516a4e69698914d1132682eb39d48822fd804b7163eecee83
+  patches:
+    - 0001_setup_pkg_resources.patch
 
 build:
   number: 6
