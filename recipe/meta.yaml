@@ -25,7 +25,7 @@ requirements:
     - pip
     - setuptools
     - numpy
-    - cython <3
+    - cython >=2,<3
     - llvm-openmp  # [not linux]
     - libgomp      # [linux]
     - gsl  # [linux]
