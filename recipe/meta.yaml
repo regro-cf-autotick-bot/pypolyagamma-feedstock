@@ -21,18 +21,15 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - numpy
     - cython
-    {% if not compiler('c').startswith('toolchain') %}
-    - llvm-openmp  # [osx]
-    {% endif %}
+    - llvm-openmp  # [not linux]
+    - libgomp      # [linux]
     - gsl  # [linux]
   run:
     - python
     - scipy
-    {% if not compiler('c').startswith('toolchain') %}
-    - llvm-openmp  # [osx]
-    {% endif %}
 
 test:
   imports:
